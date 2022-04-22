@@ -1,28 +1,40 @@
 <script lang="ts">
   import { link } from "svelte-navigator";
+  let scrollPosition: number
 </script>
 
 <header>
-  <nav>
+  <nav class:scrolling={scrollPosition > 0}>
     <ul>
       <a use:link href="/">Home</a>
-      <a use:link href="/">Max Rep Calculator</a>
-      <a use:link href="/404">BMI Calculator</a>
+      <a use:link href="/one-rm-calculator">Max Rep Calculator</a>
+      <a use:link href="/bmi-calculator">BMI Calculator</a>
     </ul>
   </nav>
 </header>
 
+<svelte:window bind:scrollY={scrollPosition} />
+
 <style>
   nav {
-    background-color: #484848;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
     padding: 15px;
+    position: fixed;
+    transition: background-color 0.5s ease;
+  }
+  
+  .scrolling {
+    background-color: rgba(0,0,0,0.6)
   }
 
   ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: center;
+    justify-content: right;
   }
   
   a {
