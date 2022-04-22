@@ -3,13 +3,11 @@
 	import Start from './views/start.svelte'
 	import PageNotFound from './views/PageNotFound.svelte'
 	import Header from './components/header/Header.svelte'
-
-	const title = 'test'
 </script>
 
 <Router>
 	<Header />
-	<Route path="/" location={title} component={Start} />
+	<Route path="/" component={Start} />
 	<Route component={PageNotFound} />
 </Router>
 
