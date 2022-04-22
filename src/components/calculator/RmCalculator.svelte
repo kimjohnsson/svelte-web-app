@@ -49,6 +49,7 @@
   }
 
   table {
+    text-align: center;
     min-width: 300px;
   }
 </style>
