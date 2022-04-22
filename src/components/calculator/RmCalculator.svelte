@@ -18,7 +18,7 @@
 
 </script>
 
-<div class="calculator">
+<main class="calculator">
   <h1>1 Rep Max!</h1>
   <input id="lift" placeholder="Weight in KG" bind:value={weight}/>
   <input id="repititions" placeholder="Max Repetitions" bind:value={repititions}/>
@@ -35,7 +35,7 @@
     </tr>
     {/each}
   </table>
-</div>
+</main>
 
 <style>
   .calculator {
