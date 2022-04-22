@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 	import Calculator from '../components/calculator/Calculator.svelte'
 </script>
 
-<div>
+<main>
 	<Calculator />
-</div>
+</main>
 
 <style>
 </style>
