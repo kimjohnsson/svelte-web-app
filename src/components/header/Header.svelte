@@ -6,9 +6,9 @@
 <header>
   <nav class:scrolling={scrollPosition > 0}>
     <ul>
-      <a use:link href="/">Home</a>
-      <a use:link href="/one-rm-calculator">Max Rep Calculator</a>
-      <a use:link href="/bmi-calculator">BMI Calculator</a>
+      <a use:link href="/">Hem</a>
+      <a use:link href="/one-rm-calculator">1 RM Max</a>
+      <a use:link href="/bmi-calculator">BMI Kalkylator</a>
     </ul>
   </nav>
 </header>

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Calander from '../components/calander/Calander.svelte'
+	
 	const headerImage = './images/rik1.jpg'
 	const siteImage = './images/rik3.jpg'
 	const ArrowDown = './icons/arrow-down.svg'
@@ -92,6 +94,10 @@
 				<p>18:00-20:00 Mikael Müller</p>
 				<p>19:00-20:00 Viktor Skaneborn</p>
 			</div>
+		</section>
+
+		<section class="row">
+			<Calander />
 		</section>
 	</main>
 </div>
