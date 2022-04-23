@@ -20,8 +20,8 @@
 
 <main class="calculator">
   <h1>1 Rep Max!</h1>
-  <input id="lift" placeholder="Weight in KG" bind:value={weight}/>
-  <input id="repititions" placeholder="Max Repetitions" bind:value={repititions}/>
+  <input id="lift" placeholder="Vikt i KG" bind:value={weight}/>
+  <input id="repititions" placeholder="Max repetitioner" bind:value={repititions}/>
 
   <table class="results">
     <tr>
@@ -40,7 +40,10 @@
 <style>
   .calculator {
     display: flex;
+    flex: 1;
+    padding: 60px 0;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
 

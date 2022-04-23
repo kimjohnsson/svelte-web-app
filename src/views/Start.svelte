@@ -4,14 +4,14 @@
 	const ArrowDown = './icons/arrow-down.svg'
 </script>
 
-<div>
+<div class="start-page">
 	<div class="banner">
 		<img src={headerImage} alt="gym equipment" />
 		<div class="tint" />
 		<h1>Romeleåsens idrottskrets</h1>
 		<img class="arrow" src={ArrowDown} alt="scroll down" />
 	</div>
-	<main>
+	<main class="container">
 		<!-- <p>
 			All verksamhet bedrevs i stora hallen, bl.a. annat så var styrketräningen ledarledd, ett tio-tal skivstänger och ett hantelställ var inköpt.
 			I lokalen var det även fester på helgerna vilket innebar att bandybollen knappt rullade veckan efter!
@@ -27,16 +27,16 @@
 			RIK hade till och med en sektion för Hockeylag som spelade i seriesystem!? Hur det gick för den sektionen har tydligen alla glömt.
 		</p> -->
 
-		<h2>Avgifter 2022</h2>
-		<div class="container">
-			<div class="membership">
+		<section class="row">
+			<h2 class="col-6">Avgifter 2022</h2>
+			<div class="col membership">
 				<h3>Medlemskort</h3>
 				<p>Upp till 12år: 350kr</p>
 				<p>13-20år: 700kr</p>
 				<p>21-99år: 1000kr</p>
 				<p>Familjekort: 1500kr</p>
 			</div>
-			<div class="local">
+			<div class="col local">
 				<h3>Hallhyra</h3>
 				<p>Behövs ingen medlemsavgift.</p>
 				<p>Enstaka timmar: 150kr/timme</p>
@@ -51,14 +51,56 @@
 				<p>Ringaregården 4</p>
 				<p>070-763 00 97</p>
 			</div>
-			<div class="image">
+			<div class="image col-3">
 				<img src={siteImage} alt="tränings vikter" />
 			</div>
-		</div>
+		</section>
+
+		<section class="row">
+			<h2 class="col-6">RIK's Gruppledda styrketräning</h2>
+			<div class="col-2">
+				<h3>Måndagar 17:00-21:00</h3>
+				<p>17:00-18:30 Filip Nilsson</p>
+				<p>18:00-19:30 Isak Ekqvist</p>
+				<p>18:30-20:00 Viktor Skaneborn</p>
+				<p>19:00-20:30 Oscar Jägerstedt</p>
+			</div>
+			<div class="col-2">
+				<h3>Tisdagar 17:00-21:00</h3>
+				<p>17:00-19:00 Kim Johnsson</p>
+				<p>18:00-20:00 Mikael Müller</p>
+				<p>19:00-20:00 Johan Larsson</p>
+				<p>19:00-20:30 Oscar Jägerstedt</p>
+			</div>
+			<div class="col-2">
+				<h3>Onsdagar 17:00-21:00</h3>
+				<p>17:00-18:30 Filip Nilsson</p>
+				<p>17:00-19:00 Kim Johnsson</p>
+				<p>19:00-20:30 Isak Ekqvist</p>
+				<p>19:30-20:30 Viktor Skaneborn</p>
+			</div>
+			<div class="col-2">
+				<h3>Torsdagar 17:00-21:00</h3>
+				<p>17:00-18:30 Filip Nilsson</p>
+				<p>18:30-20:00 Tord Håkansson</p>
+				<p>19:00-20:30 Johan Larsson</p>
+				<p>19:00-20:30 Oscar Jägerstedt</p>
+			</div>
+			<div class="col-2">
+				<h3>Fredagar 17:00-21:00</h3>
+				<p>17:00-18:30 Kim Johnsson</p>
+				<p>18:00-20:00 Mikael Müller</p>
+				<p>19:00-20:00 Viktor Skaneborn</p>
+			</div>
+		</section>
 	</main>
 </div>
 
 <style>
+	main {
+		padding: 4em 1em;
+	}
+
 	.banner {
 		height: 100vh;
 		position: relative;
@@ -110,41 +152,15 @@
 		100% { transform: translateY(0); }
 	}
 
-	/* p {
-		font: 100%/1.5 Arial, sans-serif; 
-		text-align: left;
-		margin: 0 0 1em;
-		line-height: 1.5;
-		max-width: 65ch;
-	} */
-
 	h2 {
 		padding: 0 10px;
-		margin: 0 10px;
 	}
 
-	.container div {
-		margin: 10px;
-		padding: 10px;
+	.spacing {
+		padding-bottom: 100px;
 	}
 
-	.container h3, .container p {
-    margin: 0;
-	}
-
-	.container .membership,
-	.container .local,
-	.container .contact {
-		flex: 1;
-		flex-grow: 1;
-		flex-shrink: 1;
-	}
-
-	.container .image {
-		flex: 2;
-	}
-
-	.container .image img {
+	.image img{
 		width: 100%;
 	}
 </style>

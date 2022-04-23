@@ -6,9 +6,12 @@ html, body {
 
 body {
 	color: #333;
-	margin: 0;
-	padding: 8px;
+	min-height: 100vh;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 	box-sizing: border-box;
+	background-color: #eaeaea;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
@@ -60,4 +63,132 @@ button:not(:disabled):active {
 
 button:focus {
 	border-color: #666;
+}
+
+/* Custom */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	margin: 0;
+	padding: 0;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+main {
+	padding: 1em;
+}
+
+h1 {
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	font-size: 3em;
+	font-weight: 100;
+}
+
+h2 {
+	letter-spacing: -0.02em;
+	font-size: 2.5em;
+	font-weight: 100;
+}
+
+h3 {
+	letter-spacing: -0.02em;
+	font-size: 1.7em;
+	font-weight: 100;
+}
+
+h4 {
+	letter-spacing: -0.02em;
+	font-size: 1.4em;
+	font-weight: 100;
+}
+
+p{
+	font-weight: 100;
+}
+
+.container {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+	flex-direction: column;
+  flex-wrap: wrap;
+	padding: 30px 0;
+}
+
+.center {
+	justify-content: center;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.col {
+	padding: 10px;
+	flex: 1 0 16%;
+}
+
+.col-1 {
+	padding: 10px;
+	flex: 0 0 16%;
+}
+
+.col-2 {
+	padding: 10px;
+	flex: 0 0 33%;
+}
+
+.col-3 {
+	padding: 10px;
+	flex: 0 0 50%;
+}
+
+.col-4 {
+	padding: 10px;
+	flex: 0 0 66%;
+}
+
+.col-5 {
+	padding: 10px;
+	flex: 0 0 83%;
+}
+
+.col-6 {
+	padding: 10px;
+	flex: 0 0 100%;
+}
+
+
+@media (min-width: 640px) {
+	main {
+		max-width: 1200px;
+		margin: auto;
+		padding: 2em;
+	}
+
+	.row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	h1 {
+		font-size: 3.5em;
+	}
+
+	h4 {
+		font-size: 1.4em;
+	}
 }

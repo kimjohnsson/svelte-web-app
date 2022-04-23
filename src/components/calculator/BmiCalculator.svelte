@@ -10,9 +10,9 @@
 </script>
 
 <main class="calculator">
-  <h1>BMI Calculator!</h1>
-  <input id="weight" placeholder="Weight in KG" bind:value={weight}/>
-  <input id="height" placeholder="Height in CM" bind:value={height}/>
+  <h1>BMI Kalkylator!</h1>
+  <input id="weight" placeholder="vikt i KG" bind:value={weight}/>
+  <input id="height" placeholder="Längd i CM" bind:value={height}/>
 
   {#if bmi()}
   <h3>Your BMI is: {bmi().toFixed(1)}</h3>
@@ -22,7 +22,10 @@
 <style>
   .calculator {
     display: flex;
+    flex: 1;
+    padding: 60px 0;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
 
