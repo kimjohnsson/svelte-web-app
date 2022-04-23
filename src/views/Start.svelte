@@ -156,10 +156,6 @@
 		padding: 0 10px;
 	}
 
-	.spacing {
-		padding-bottom: 100px;
-	}
-
 	.image img{
 		width: 100%;
 	}
