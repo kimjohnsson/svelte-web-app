@@ -2,14 +2,24 @@
   let weight: number | null = null
   let repititions: number | null = null
   const percentages = [100, 95, 90, 85, 80, 75, 70, 65, 60, 55, 50]
+
+  const isInputValid = () => {
+    if(
+        !weight ||
+        !repititions ||
+        isNaN(weight) ||
+        isNaN(repititions)
+      ) return false
+    return true
+  }
   
   $: pctOfOneRepMax = (pct: number) => {
-    if(!weight || !repititions) return 0
+    if(!isInputValid()) return 0
     return calculateWeight(pct) / calculateWeight(100) * 100
   }
 
   $: calculateWeight = (pct: number) => {
-    if(!weight || !repititions) return 0
+    if(!isInputValid()) return 0
     const maxPct = 100 - (repititions * 2.5)
     const decimal = maxPct / pct
     const repMax = weight / decimal

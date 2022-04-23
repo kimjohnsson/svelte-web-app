@@ -2,8 +2,18 @@
   let weight: number | null = null
   let height: number | null = null
 
+  const isInputValid = () => {
+    if(
+        !weight ||
+        !height ||
+        isNaN(weight) ||
+        isNaN(height)
+      ) return false
+    return true
+  }
+
   $: bmi = () => {
-    if(!weight || !height) return 0
+    if(!isInputValid()) return 0
     return (weight / Math.pow(height / 100, 2))
   }
 
