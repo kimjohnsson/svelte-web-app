@@ -21,11 +21,11 @@
 
 <main class="calculator">
   <h1>BMI Kalkylator!</h1>
-  <input id="weight" placeholder="vikt i KG" bind:value={weight}/>
+  <input id="weight" placeholder="Vikt i KG" bind:value={weight}/>
   <input id="height" placeholder="Längd i CM" bind:value={height}/>
 
   {#if bmi()}
-  <h3>Your BMI is: {bmi().toFixed(1)}</h3>
+  <h3>Ditt BMI är: {bmi().toFixed(1)}</h3>
   {/if}
 </main>
 
